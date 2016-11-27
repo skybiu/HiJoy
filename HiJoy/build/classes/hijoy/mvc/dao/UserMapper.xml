@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hijoy.mvc.dao.UserMapper">
+
+  <sql id="userSql_1">
+	  username=#{username}
+  </sql>
+  <!-- 增加用户 -->
+  <insert id="addUser" parameterType="User">
+       insert into user values(#{username},#{password})
+  </insert>
+  
+  <!-- 删除用户 -->
+  <delete id="deleteUser" parameterType="User">
+    delete from user 
+    <where>
+      <include refid="userSql_1" />
+    </where>
+  </delete>
+  
+  <!-- 修改用户密码 -->
+  <update id="updateUser" parameterType="User">
+    update user password=#{password}
+      <where>
+        <include refid="userSql_1"/>
+      </where>
+  </update>
+  
+  <!-- 查询用户 -->
+  <select id="findUser" parameterType="User" resultType="User" >
+    select * from user
+    <where>
+      <include refid="userSql_1" />
+    </where>
+  </select>
+</mapper>

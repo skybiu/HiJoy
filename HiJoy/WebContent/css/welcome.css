@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+/*注意如果css出错会造成页面一定的bug*/
+/*此类class用来关联方法*/
+.move{}
+/*******************/
+/*此类class用来关联id*/
+.button_pre{
+	position:absolute;
+	left:100px;
+	top:100px;
+	z-index:999;
+}
+.button_next{
+	position:absolute;
+	right:100px;
+	top:100px;
+	z-index:999
+}
+/*******************/
+.translation{
+	animation:translation 2s ease 1s 1 normal none running;
+}
+@keyframes translation{
+}
+.login_head{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.username{
+	color:red
+}
+.bgm{
+	position: fixed;
+	top:90%;
+	left:30%;
+	z-index: 999;
+}
+.logo{
+	position: absolute;
+	left: 100px;
+	top: 20px;
+}
+.logo img{
+	height: 69px;
+	width: 330px;
+}
+body{
+	background-image:url(../images/bg.jpg);
+	background-attachment:fix;
+	background-repeat:repeat;
+}
+.bg{
+	position:fixed;
+	left:0;
+	top:0;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+}
+.bg>img{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:-10;
+}
+.full_window_div{
+	position: fixed;
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	z-index: -999;
+}
+.source_post{
+	width:inherit;
+	height:50%;
+}
+#source_post_list{
+	padding:5px;
+	text-align:center;
+	/*background-color:#e5eecc;
+	border:solid 1px #c3c3c3;*/
+}
+.host_message{
+	width:inherit;
+	height:50%;
+}
+.main{
+	position:absolute;
+	top:20%;
+	left:5%;
+	width:90%;
+}
